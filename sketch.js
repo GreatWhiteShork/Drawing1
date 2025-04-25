@@ -98,7 +98,7 @@ function mousePressed() {
   rand = random();
   if ( mouseY < 100 ) activeColour = colourList[floor(mouseX / windowWidth * colourList.length)];
   noStroke();
-      if ( rand < 0.25 ) {
+      if ( true ) {
     fill(activeColour);
     noStroke();
     circle(mouseX, mouseY, 15);
@@ -119,7 +119,7 @@ function touchStarted() {
   if ( mouseY < 100 ) activeColour = colourList[floor(mouseX / windowWidth * colourList.length)];
   
   noStroke();
-    if ( rand < 0.25 ) {
+    if ( true ) {
     fill(activeColour);
     noStroke();
     circle(15);
