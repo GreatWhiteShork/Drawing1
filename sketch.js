@@ -63,24 +63,14 @@ function mouseDragged() {
   if ( prev == undefined ) {
     prev = [mouseX, mouseY];
   }
+  noFill();
+  stroke(activeColour);
+  if ( rand < 0.25 ) strokeWeight(sin(frameCount*0.05) * 7 + 17);
+   else if ( rand < 0.50) strokeWeight(sin(frameCount*0.1) * 5 + 11);
+    else if ( rand < 0.75 ) strokeWeight(sin(frameCount*0.15) * 7 + 17);
+    else if ( rand < 1.00 ) strokeWeight(sin(frameCount*0.2) * 5 + 11) ;
   
-  if ( true ) {
-    noFill();
-    stroke(activeColour);
-    strokeWeight(sin(frameCount*0.05) * 7 + 17);
-    line(pmouseX, pmouseY, mouseX, mouseY);
-    return;
-  } else {
-    if ( dist(mouseX, mouseY, prev[0], prev[1]) < 50 ) return;
-    prev = [mouseX, mouseY];
-    noStroke();
-    fill(activeColour);
-    
-    if ( rand < 0.50) circle(mouseX, mouseY, 35);
-    else if ( rand < 0.75 ) square(mouseX-17.7, mouseY-17.5, 35);
-    else if ( rand < 1.00 ) triangle(mouseX - 20, mouseY + 10, mouseX, mouseY - 25, mouseX + 20, mouseY + 10)
-  }
-  
+  line(pmouseX, pmouseY, mouseX, mouseY);
 }
 
 function mouseReleased() {
@@ -98,17 +88,14 @@ function mousePressed() {
   rand = random();
   if ( mouseY < 100 ) activeColour = colourList[floor(mouseX / windowWidth * colourList.length)];
   noStroke();
-      if ( true ) {
-    fill(activeColour);
-    noStroke();
-    circle(mouseX, mouseY, (sin(frameCount*0.05) * 7 + 17));
-  } else {
-    fill(activeColour);
-    
-    if ( rand < 0.50) circle(mouseX, mouseY, 35);
-    else if ( rand < 0.75 ) square(mouseX-17.7, mouseY-17.5, 35);
-    else if ( rand < 1.00 ) triangle(mouseX - 20, mouseY + 10, mouseX, mouseY - 25, mouseX + 20, mouseY + 10)
-  }
+      noFill();
+  stroke(activeColour);
+  if ( rand < 0.25 ) strokeWeight(sin(frameCount*0.05) * 7 + 17);
+   else if ( rand < 0.50) strokeWeight(sin(frameCount*0.1) * 5 + 11);
+    else if ( rand < 0.75 ) strokeWeight(sin(frameCount*0.15) * 7 + 17);
+    else if ( rand < 1.00 ) strokeWeight(sin(frameCount*0.2) * 5 + 11) ;
+  
+  line(pmouseX, pmouseY, mouseX, mouseY);
 }
 
 function touchStarted() {
@@ -119,16 +106,13 @@ function touchStarted() {
   if ( mouseY < 100 ) activeColour = colourList[floor(mouseX / windowWidth * colourList.length)];
   
   noStroke();
-    if ( true ) {
-    fill(activeColour);
-    noStroke();
-    circle(mouseX, mouseY, (sin(frameCount*0.05) * 7 + 17) );
-  } else {
-    fill(activeColour);
-    
-    if ( rand < 0.50) circle(mouseX, mouseY, 35);
-    else if ( rand < 0.75 ) square(mouseX-17.7, mouseY-17.5, 35);
-    else if ( rand < 1.00 ) triangle(mouseX - 20, mouseY + 10, mouseX, mouseY - 25, mouseX + 20, mouseY + 10)
-  }
+    noFill();
+  stroke(activeColour);
+  if ( rand < 0.25 ) strokeWeight(sin(frameCount*0.05) * 7 + 17);
+   else if ( rand < 0.50) strokeWeight(sin(frameCount*0.1) * 5 + 11);
+    else if ( rand < 0.75 ) strokeWeight(sin(frameCount*0.15) * 7 + 17);
+    else if ( rand < 1.00 ) strokeWeight(sin(frameCount*0.2) * 5 + 11) ;
+  
+  line(pmouseX, pmouseY, mouseX, mouseY);
   
 }
