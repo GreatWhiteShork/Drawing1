@@ -67,7 +67,7 @@ function mouseDragged() {
   if ( true ) {
     noFill();
     stroke(activeColour);
-    strokeWeight(15);
+    strokeWeight(sin(frameCount*0.05);
     line(pmouseX, pmouseY, mouseX, mouseY);
     return;
   } else {
@@ -101,7 +101,7 @@ function mousePressed() {
       if ( true ) {
     fill(activeColour);
     noStroke();
-    circle(mouseX, mouseY, 15);
+    circle(mouseX, mouseY, (sin(frameCount*0.05); );
   } else {
     fill(activeColour);
     
@@ -122,7 +122,7 @@ function touchStarted() {
     if ( true ) {
     fill(activeColour);
     noStroke();
-    circle(15);
+    circle(mouseX, mouseY, (sin(frameCount*0.05););
   } else {
     fill(activeColour);
     
