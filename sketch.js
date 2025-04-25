@@ -64,7 +64,7 @@ function mouseDragged() {
     prev = [mouseX, mouseY];
   }
   
-  if ( rand < 0.25 ) {
+  if ( true ) {
     noFill();
     stroke(activeColour);
     strokeWeight(15);
