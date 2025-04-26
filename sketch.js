@@ -66,7 +66,7 @@ function mouseDragged() {
   noFill();
   stroke(activeColour);
   if ( rand < 0.5 ) strokeWeight(sin(frameCount * 0.2) * 7 + 15)
-else strokeWeight(20 - min(19, dist(mouseX, mouseY, pmouseX, pmouseY) * 0.05)) ;
+else strokeWeight(20 - min(19, dist(mouseX, mouseY, pmouseX, pmouseY) * 0.3)) ;
   
   line(pmouseX, pmouseY, mouseX, mouseY);
 }
@@ -89,7 +89,7 @@ function mousePressed() {
       noFill();
   stroke(activeColour);
   if ( rand < 0.5 ) strokeWeight(sin(frameCount * 0.2) * 7 + 15)
-else strokeWeight(20 - min(19, dist(mouseX, mouseY, pmouseX, pmouseY) * 0.05) );
+else strokeWeight(20 - min(19, dist(mouseX, mouseY, pmouseX, pmouseY) * 0.3) );
   
   line(pmouseX, pmouseY, mouseX, mouseY);
 }
@@ -105,7 +105,7 @@ function touchStarted() {
     noFill();
   stroke(activeColour);
   if ( rand < 0.5 ) strokeWeight(sin(frameCount * 0.2) * 7 + 15)
-else strokeWeight(20 - min(19, dist(mouseX, mouseY, pmouseX, pmouseY ) * 0.05)) ;
+else strokeWeight(20 - min(19, dist(mouseX, mouseY, pmouseX, pmouseY ) * 0.3)) ;
   
   line(pmouseX, pmouseY, mouseX, mouseY);
   
